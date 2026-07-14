@@ -1,4 +1,4 @@
-# Shubh Unisex Salon — Premium Responsive Website
+# Shubh Unisex Salon - Premium Responsive Website
 
 A complete, production-ready React + Vite website for **Shubh Unisex Salon**, Indore's premier unisex salon. Designed with a luxury black-and-gold aesthetic, smooth animations, and full mobile responsiveness.
 
@@ -6,25 +6,25 @@ A complete, production-ready React + Vite website for **Shubh Unisex Salon**, In
 
 ## Features
 
-- **Premium Design** — Luxury black (#111111) + gold (#D4AF37) color palette
+- **Premium Design** - Luxury black (#111111) + gold (#D4AF37) color palette
 - **Playfair Display + Poppins** typography for an elegant feel
-- **Framer Motion animations** — scroll reveals, counters, hero entrance, carousel
-- **Sticky Navbar** — transparent on load, glass-blur on scroll, mobile hamburger menu
-- **Hero Section** — full-viewport with Unsplash background, animated particles, CTA buttons
-- **About Section** — two-column layout with animated stat counters
-- **Services Section** — 17 filterable service cards with hover effects
-- **Why Choose Us** — dark charcoal section with 8 icon feature cards
-- **Gallery** — 12-image masonry grid with hover zoom and lightbox
-- **Testimonials** — auto-play carousel with 6 customer reviews
-- **Instagram Section** — CTA band linking to the real profile
-- **Contact Section** — contact cards + embedded Google Map
-- **Footer** — dark footer with quick links, services, and contact info
-- **Floating WhatsApp Button** — with pulse animation
-- **Sticky Call Button** — mobile-only bottom bar
-- **Scroll to Top Button** — appears after scrolling
-- **Loading Screen** — animated brand intro
-- **SEO-friendly** — meta tags, OG tags, semantic HTML
-- **Fully Responsive** — mobile-first design
+- **Framer Motion animations** - scroll reveals, counters, hero entrance, carousel
+- **Sticky Navbar** - transparent on load, glass-blur on scroll, mobile hamburger menu
+- **Hero Section** - full-viewport with Unsplash background, animated particles, CTA buttons
+- **About Section** - two-column layout with animated stat counters
+- **Services Section** - 17 filterable service cards with hover effects
+- **Why Choose Us** - dark charcoal section with 8 icon feature cards
+- **Gallery** - 12-image masonry grid with hover zoom and lightbox
+- **Testimonials** - auto-play carousel with 6 customer reviews
+- **Instagram Section** - CTA band linking to the real profile
+- **Contact Section** - contact cards + embedded Google Map
+- **Footer** - dark footer with quick links, services, and contact info
+- **Floating WhatsApp Button** - with pulse animation
+- **Sticky Call Button** - mobile-only bottom bar
+- **Scroll to Top Button** - appears after scrolling
+- **Loading Screen** - animated brand intro
+- **SEO-friendly** - meta tags, OG tags, semantic HTML
+- **Fully Responsive** - mobile-first design
 
 ---
 
@@ -117,31 +117,6 @@ salon-website/
 └── README.md
 ```
 
----
-
-## Customization
-
-### Update Business Info
-Edit the relevant component files:
-- **Phone number** — `Navbar.jsx`, `Hero.jsx`, `Contact.jsx`, `Footer.jsx`, `WhatsAppButton.jsx`
-- **Address** — `Contact.jsx`, `Footer.jsx`
-- **Instagram URL** — `InstagramSection.jsx`, `Footer.jsx`
-- **Working hours** — `Contact.jsx`, `Footer.jsx`
-
-### Update Services
-Edit `src/data/servicesData.js` — add, remove, or modify services.
-
-### Update Testimonials
-Edit `src/data/testimonialsData.js` — add real customer reviews.
-
-### Update Gallery
-Edit `src/data/galleryData.js` — replace Unsplash URLs with actual salon photos.
-
-### Update Colors
-Edit `tailwind.config.js` — modify `gold` or `salon` color values.
-
----
-
 ## Deployment
 
 ### Deploy to Vercel
@@ -166,7 +141,3 @@ Edit `tailwind.config.js` — modify `gold` or `salon` color values.
 2. Drag and drop the `dist/` folder at [app.netlify.com/drop](https://app.netlify.com/drop)
 
 ---
-
-## License
-
-This project is created for **Shubh Unisex Salon**, Indore. All rights reserved.
