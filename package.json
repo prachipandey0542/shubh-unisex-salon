@@ -2,6 +2,7 @@
   "name": "shubh-unisex-salon",
   "version": "1.0.0",
   "private": true,
+  "author": "Prachi Pandey",
   "type": "module",
   "scripts": {
     "dev": "vite",
