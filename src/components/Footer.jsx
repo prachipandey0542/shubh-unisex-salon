@@ -1,37 +1,34 @@
-import { FaInstagram } from 'react-icons/fa6'
-import { FiPhone, FiMapPin } from 'react-icons/fi'
+import { FaInstagram } from "react-icons/fa6";
+import { FiPhone, FiMapPin } from "react-icons/fi";
 
 const INSTAGRAM_URL =
-  'https://www.instagram.com/shubh_unisex_salon?igsh=cDNhMmYzcWJyeGdq&utm_source=qr'
+  "https://www.instagram.com/shubh_unisex_salon?igsh=cDNhMmYzcWJyeGdq&utm_source=qr";
 
 const quickLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Reviews', href: '#reviews' },
-  { label: 'Contact', href: '#contact' },
-]
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Gallery", href: "#gallery" },
+  { label: "Reviews", href: "#reviews" },
+  { label: "Contact", href: "#contact" },
+];
 
 const serviceLinks = [
-  'Hair Cut & Styling',
-  'Hair Coloring',
-  'Hair Spa & Keratin',
-  'Beard Grooming',
-  'Facial & Cleanup',
-  'Bridal Makeup',
-  'Waxing & Threading',
-  'Smoothening',
-]
+  "Hair Cut & Styling",
+  "Hair Coloring",
+  "Hair Spa & Keratin",
+  "Beard Grooming",
+  "Facial & Cleanup",
+  "Bridal Makeup",
+  "Waxing & Threading",
+  "Smoothening",
+];
 
 function scrollTo(href) {
-  const el = document.querySelector(href)
-  if (el) el.scrollIntoView({ behavior: 'smooth' })
+  const el = document.querySelector(href);
+  if (el) el.scrollIntoView({ behavior: "smooth" });
 }
 
-/**
- * Dark, elegant footer with quick links, services, and contact info.
- */
 function Footer() {
   return (
     <footer className="bg-salon-black text-white">
@@ -44,13 +41,15 @@ function Footer() {
               Shubh <span className="text-gold italic">Unisex</span> Salon
             </h3>
             <p className="font-poppins text-white/50 text-sm leading-relaxed mb-6">
-              Where Style Meets Perfection. Indore's premier unisex salon offering expert
-              grooming and beauty services.
+              Where Style Meets Perfection. Indore's premier unisex salon
+              offering expert grooming and beauty services.
             </p>
             {/* Rating badge */}
             <div className="inline-flex items-center gap-2 border border-gold/30 px-4 py-2">
-              <span className="text-gold">{'★'.repeat(5)}</span>
-              <span className="font-poppins text-white/60 text-xs">5.0 · 52+ Reviews</span>
+              <span className="text-gold">{"★".repeat(5)}</span>
+              <span className="font-poppins text-white/60 text-xs">
+                5.0 · 52+ Reviews
+              </span>
             </div>
             {/* Instagram */}
             <div className="mt-5">
@@ -76,7 +75,10 @@ function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    onClick={(e) => { e.preventDefault(); scrollTo(link.href) }}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollTo(link.href);
+                    }}
                     className="font-poppins text-sm text-white/50 hover:text-gold transition-colors duration-300 flex items-center gap-2"
                   >
                     <span className="w-1 h-1 rounded-full bg-gold/50" />
@@ -98,7 +100,10 @@ function Footer() {
                 <li key={service}>
                   <a
                     href="#services"
-                    onClick={(e) => { e.preventDefault(); scrollTo('#services') }}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollTo("#services");
+                    }}
                     className="font-poppins text-sm text-white/50 hover:text-gold transition-colors duration-300 flex items-center gap-2"
                   >
                     <span className="w-1 h-1 rounded-full bg-gold/50" />
@@ -126,13 +131,18 @@ function Footer() {
               <div className="flex items-start gap-3">
                 <FiMapPin className="text-gold text-sm flex-shrink-0 mt-0.5" />
                 <p className="font-poppins text-sm text-white/50 leading-relaxed">
-                  172, Bholaram Ustad Marg,<br />
+                  172, Bholaram Ustad Marg,
+                  <br />
                   Pipliya Rao, Indore – 452001
                 </p>
               </div>
               <div className="pt-2">
-                <p className="font-poppins text-xs text-gold/70 tracking-widest uppercase mb-1">Hours</p>
-                <p className="font-poppins text-sm text-white/50">Mon–Sun: 9:00 AM – 9:00 PM</p>
+                <p className="font-poppins text-xs text-gold/70 tracking-widest uppercase mb-1">
+                  Hours
+                </p>
+                <p className="font-poppins text-sm text-white/50">
+                  Mon–Sun: 9:00 AM – 9:00 PM
+                </p>
               </div>
             </div>
           </div>
@@ -143,10 +153,11 @@ function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="font-poppins text-white/40 text-xs text-center sm:text-left">
-            © {new Date().getFullYear()} Shubh Unisex Salon. All Rights Reserved.
+            © {new Date().getFullYear()} Shubh Unisex Salon. All Rights
+            Reserved.
           </p>
           <button
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="font-poppins text-xs text-white/40 hover:text-gold transition-colors duration-300 tracking-widest uppercase border border-white/10 hover:border-gold px-4 py-2"
           >
             Back to Top ↑
@@ -154,7 +165,7 @@ function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

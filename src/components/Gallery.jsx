@@ -1,27 +1,26 @@
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { FiX, FiChevronLeft, FiChevronRight, FiZoomIn } from 'react-icons/fi'
-import { galleryImages } from '../data/galleryData'
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FiX, FiChevronLeft, FiChevronRight, FiZoomIn } from "react-icons/fi";
+import { galleryImages } from "../data/galleryData";
 
-/**
- * Gallery section with masonry-style grid, hover zoom, and lightbox.
- */
 function Gallery() {
-  const [lightboxIndex, setLightboxIndex] = useState(null)
+  const [lightboxIndex, setLightboxIndex] = useState(null);
 
-  const openLightbox = (i) => setLightboxIndex(i)
-  const closeLightbox = () => setLightboxIndex(null)
+  const openLightbox = (i) => setLightboxIndex(i);
+  const closeLightbox = () => setLightboxIndex(null);
   const prevImage = () =>
-    setLightboxIndex((i) => (i - 1 + galleryImages.length) % galleryImages.length)
+    setLightboxIndex(
+      (i) => (i - 1 + galleryImages.length) % galleryImages.length,
+    );
   const nextImage = () =>
-    setLightboxIndex((i) => (i + 1) % galleryImages.length)
+    setLightboxIndex((i) => (i + 1) % galleryImages.length);
 
   // Keyboard navigation
   const handleKeyDown = (e) => {
-    if (e.key === 'Escape') closeLightbox()
-    if (e.key === 'ArrowLeft') prevImage()
-    if (e.key === 'ArrowRight') nextImage()
-  }
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowLeft") prevImage();
+    if (e.key === "ArrowRight") nextImage();
+  };
 
   return (
     <section id="gallery" className="py-24 bg-salon-white">
@@ -51,9 +50,9 @@ function Gallery() {
               viewport={{ once: true, amount: 0.1 }}
               transition={{ delay: i * 0.05, duration: 0.4 }}
               className={`relative overflow-hidden cursor-pointer group ${
-                i === 0 || i === 5 ? 'row-span-2' : ''
+                i === 0 || i === 5 ? "row-span-2" : ""
               }`}
-              style={{ height: i === 0 || i === 5 ? undefined : '200px' }}
+              style={{ height: i === 0 || i === 5 ? undefined : "200px" }}
               onClick={() => openLightbox(i)}
             >
               <img
@@ -61,7 +60,7 @@ function Gallery() {
                 alt={img.alt}
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                style={{ height: i === 0 || i === 5 ? '412px' : '200px' }}
+                style={{ height: i === 0 || i === 5 ? "412px" : "200px" }}
               />
               {/* Hover overlay */}
               <div className="absolute inset-0 bg-salon-black/0 group-hover:bg-salon-black/50 transition-all duration-300 flex items-center justify-center">
@@ -96,7 +95,10 @@ function Gallery() {
 
             {/* Prev */}
             <button
-              onClick={(e) => { e.stopPropagation(); prevImage() }}
+              onClick={(e) => {
+                e.stopPropagation();
+                prevImage();
+              }}
               className="absolute left-4 md:left-8 text-white/70 hover:text-gold text-3xl transition-colors z-10 p-2"
             >
               <FiChevronLeft />
@@ -105,7 +107,7 @@ function Gallery() {
             {/* Image */}
             <motion.img
               key={lightboxIndex}
-              src={galleryImages[lightboxIndex].src.replace('w=600', 'w=1200')}
+              src={galleryImages[lightboxIndex].src.replace("w=600", "w=1200")}
               alt={galleryImages[lightboxIndex].alt}
               className="max-w-4xl max-h-[80vh] w-full object-contain px-16"
               initial={{ opacity: 0, scale: 0.9 }}
@@ -116,7 +118,10 @@ function Gallery() {
 
             {/* Next */}
             <button
-              onClick={(e) => { e.stopPropagation(); nextImage() }}
+              onClick={(e) => {
+                e.stopPropagation();
+                nextImage();
+              }}
               className="absolute right-4 md:right-8 text-white/70 hover:text-gold text-3xl transition-colors z-10 p-2"
             >
               <FiChevronRight />
@@ -124,13 +129,14 @@ function Gallery() {
 
             {/* Caption */}
             <p className="absolute bottom-8 left-1/2 -translate-x-1/2 font-poppins text-white/60 text-sm tracking-wide">
-              {lightboxIndex + 1} / {galleryImages.length} — {galleryImages[lightboxIndex].alt}
+              {lightboxIndex + 1} / {galleryImages.length} —{" "}
+              {galleryImages[lightboxIndex].alt}
             </p>
           </motion.div>
         )}
       </AnimatePresence>
     </section>
-  )
+  );
 }
 
-export default Gallery
+export default Gallery;

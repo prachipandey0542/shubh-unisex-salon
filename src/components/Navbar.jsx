@@ -1,48 +1,45 @@
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { HiMenuAlt3, HiX } from 'react-icons/hi'
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Reviews', href: '#reviews' },
-  { label: 'Contact', href: '#contact' },
-]
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Gallery", href: "#gallery" },
+  { label: "Reviews", href: "#reviews" },
+  { label: "Contact", href: "#contact" },
+];
 
-/**
- * Sticky navbar — transparent on load, glass-dark on scroll.
- */
 function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleNavClick = (href) => {
-    setMenuOpen(false)
-    const el = document.querySelector(href)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
-  }
+    setMenuOpen(false);
+    const el = document.querySelector(href);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-salon-black/95 backdrop-blur-md shadow-lg shadow-black/30 py-3'
-          : 'bg-transparent py-5'
+          ? "bg-salon-black/95 backdrop-blur-md shadow-lg shadow-black/30 py-3"
+          : "bg-transparent py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <motion.a
           href="#home"
-          onClick={() => handleNavClick('#home')}
+          onClick={() => handleNavClick("#home")}
           className="font-playfair text-xl md:text-2xl text-white tracking-wide cursor-pointer"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -57,7 +54,10 @@ function Navbar() {
             <motion.a
               key={link.label}
               href={link.href}
-              onClick={(e) => { e.preventDefault(); handleNavClick(link.href) }}
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick(link.href);
+              }}
               className="font-poppins text-sm text-white/80 hover:text-gold tracking-widest uppercase transition-colors duration-300 relative group"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -96,7 +96,7 @@ function Navbar() {
           <motion.div
             className="lg:hidden bg-salon-black/98 backdrop-blur-md border-t border-gold/20"
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
           >
@@ -105,7 +105,10 @@ function Navbar() {
                 <a
                   key={link.label}
                   href={link.href}
-                  onClick={(e) => { e.preventDefault(); handleNavClick(link.href) }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(link.href);
+                  }}
                   className="font-poppins text-sm text-white/80 hover:text-gold tracking-widest uppercase transition-colors duration-300 py-2 border-b border-white/10"
                 >
                   {link.label}
@@ -122,7 +125,7 @@ function Navbar() {
         )}
       </AnimatePresence>
     </header>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

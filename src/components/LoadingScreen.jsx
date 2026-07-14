@@ -1,8 +1,5 @@
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
-/**
- * Full-screen loading animation shown on initial page load.
- */
 function LoadingScreen() {
   return (
     <div className="fixed inset-0 bg-salon-black flex flex-col items-center justify-center z-50">
@@ -10,7 +7,7 @@ function LoadingScreen() {
       <motion.div
         className="w-20 h-20 rounded-full border-4 border-gold/20 border-t-gold mb-8"
         animate={{ rotate: 360 }}
-        transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
       />
 
       {/* Brand name */}
@@ -20,9 +17,7 @@ function LoadingScreen() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
       >
-        Shubh{' '}
-        <span className="text-gold italic">Unisex</span>{' '}
-        Salon
+        Shubh <span className="text-gold italic">Unisex</span> Salon
       </motion.h1>
 
       {/* Tagline */}
@@ -38,7 +33,7 @@ function LoadingScreen() {
       {/* Progress bar */}
       <motion.div className="absolute bottom-0 left-0 h-0.5 bg-gold loading-bar" />
     </div>
-  )
+  );
 }
 
-export default LoadingScreen
+export default LoadingScreen;

@@ -19,9 +19,6 @@ const cardVariants = {
   }),
 };
 
-/**
- * Services section — filterable card grid.
- */
 function Services() {
   const [activeCategory, setActiveCategory] = useState("all");
 

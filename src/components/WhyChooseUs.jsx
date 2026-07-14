@@ -53,9 +53,6 @@ const reasons = [
   },
 ];
 
-/**
- * Why Choose Us — dark section with icon feature cards.
- */
 function WhyChooseUs() {
   return (
     <section className="py-24 bg-salon-charcoal">

@@ -1,43 +1,44 @@
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
-import { testimonials } from '../data/testimonialsData'
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { testimonials } from "../data/testimonialsData";
 
-/**
- * Testimonials carousel with auto-play and manual controls.
- */
 function Testimonials() {
-  const [current, setCurrent] = useState(0)
-  const [direction, setDirection] = useState(1)
+  const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(1);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setDirection(1)
-      setCurrent((c) => (c + 1) % testimonials.length)
-    }, 5000)
-    return () => clearInterval(timer)
-  }, [])
+      setDirection(1);
+      setCurrent((c) => (c + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   const goTo = (index) => {
-    setDirection(index > current ? 1 : -1)
-    setCurrent(index)
-  }
+    setDirection(index > current ? 1 : -1);
+    setCurrent(index);
+  };
   const prev = () => {
-    setDirection(-1)
-    setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length)
-  }
+    setDirection(-1);
+    setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length);
+  };
   const next = () => {
-    setDirection(1)
-    setCurrent((c) => (c + 1) % testimonials.length)
-  }
+    setDirection(1);
+    setCurrent((c) => (c + 1) % testimonials.length);
+  };
 
   const variants = {
     enter: (dir) => ({ x: dir > 0 ? 60 : -60, opacity: 0 }),
     center: { x: 0, opacity: 1, transition: { duration: 0.5 } },
-    exit: (dir) => ({ x: dir > 0 ? -60 : 60, opacity: 0, transition: { duration: 0.3 } }),
-  }
+    exit: (dir) => ({
+      x: dir > 0 ? -60 : 60,
+      opacity: 0,
+      transition: { duration: 0.3 },
+    }),
+  };
 
-  const t = testimonials[current]
+  const t = testimonials[current];
 
   return (
     <section id="reviews" className="py-24 bg-salon-beige overflow-hidden">
@@ -53,7 +54,7 @@ function Testimonials() {
             What Our <span className="text-gold italic">Clients Say</span>
           </h2>
           <div className="flex items-center justify-center gap-2 mt-4">
-            <span className="text-gold text-lg">{'★'.repeat(5)}</span>
+            <span className="text-gold text-lg">{"★".repeat(5)}</span>
             <span className="font-poppins text-salon-black/60 text-sm">
               52+ Happy Customers · 5.0 Rating
             </span>
@@ -80,7 +81,9 @@ function Testimonials() {
               {/* Stars */}
               <div className="flex justify-center gap-1 mb-6">
                 {[...Array(t.rating)].map((_, i) => (
-                  <span key={i} className="text-gold text-xl">★</span>
+                  <span key={i} className="text-gold text-xl">
+                    ★
+                  </span>
                 ))}
               </div>
 
@@ -126,14 +129,14 @@ function Testimonials() {
               key={i}
               onClick={() => goTo(i)}
               className={`h-1.5 rounded-full transition-all duration-300 ${
-                i === current ? 'w-8 bg-gold' : 'w-3 bg-gold/30'
+                i === current ? "w-8 bg-gold" : "w-3 bg-gold/30"
               }`}
             />
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Testimonials
+export default Testimonials;

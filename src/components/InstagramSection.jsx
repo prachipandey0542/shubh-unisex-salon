@@ -1,22 +1,19 @@
-import { motion } from 'framer-motion'
-import { FaInstagram } from 'react-icons/fa6'
+import { motion } from "framer-motion";
+import { FaInstagram } from "react-icons/fa6";
 
 const INSTAGRAM_URL =
-  'https://www.instagram.com/shubh_unisex_salon?igsh=cDNhMmYzcWJyeGdq&utm_source=qr'
+  "https://www.instagram.com/shubh_unisex_salon?igsh=cDNhMmYzcWJyeGdq&utm_source=qr";
 
 // Mock Instagram grid images
 const igImages = [
-  'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=300&q=80',
-  'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=300&q=80',
-  'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=300&q=80',
-  'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=300&q=80',
-  'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=300&q=80',
-  'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=300&q=80',
-]
+  "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=300&q=80",
+  "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=300&q=80",
+  "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=300&q=80",
+  "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=300&q=80",
+  "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=300&q=80",
+  "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=300&q=80",
+];
 
-/**
- * Instagram section — CTA band + mock grid preview.
- */
 function InstagramSection() {
   return (
     <section className="py-24 bg-salon-black overflow-hidden">
@@ -34,8 +31,9 @@ function InstagramSection() {
             Follow Us on <span className="text-gold italic">Instagram</span>
           </h2>
           <p className="font-poppins text-white/50 text-base max-w-lg mx-auto mb-8 leading-relaxed">
-            Stay updated with the latest hairstyles, beauty transformations, exclusive offers,
-            and behind-the-scenes moments from Shubh Unisex Salon.
+            Stay updated with the latest hairstyles, beauty transformations,
+            exclusive offers, and behind-the-scenes moments from Shubh Unisex
+            Salon.
           </p>
           <a
             href={INSTAGRAM_URL}
@@ -76,7 +74,7 @@ function InstagramSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default InstagramSection
+export default InstagramSection;

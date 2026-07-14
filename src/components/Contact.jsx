@@ -30,9 +30,6 @@ const contactCards = [
   },
 ];
 
-/**
- * Contact section — contact cards + embedded Google Map.
- */
 function Contact() {
   return (
     <section id="contact" className="py-24 bg-salon-white">

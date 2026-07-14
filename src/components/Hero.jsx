@@ -1,14 +1,11 @@
-import { motion } from 'framer-motion'
-import { FiChevronDown, FiPhone } from 'react-icons/fi'
+import { motion } from "framer-motion";
+import { FiChevronDown, FiPhone } from "react-icons/fi";
 
-/**
- * Full-viewport hero section with background image and animated text.
- */
 function Hero() {
   const handleScroll = (href) => {
-    const el = document.querySelector(href)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
-  }
+    const el = document.querySelector(href);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <section
@@ -16,8 +13,8 @@ function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
         backgroundImage: `url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
       {/* Dark gradient overlay */}
@@ -34,7 +31,11 @@ function Hero() {
               top: `${20 + (i % 3) * 25}%`,
             }}
             animate={{ y: [-10, 10, -10], opacity: [0.3, 0.8, 0.3] }}
-            transition={{ duration: 3 + i * 0.5, repeat: Infinity, ease: 'easeInOut' }}
+            transition={{
+              duration: 3 + i * 0.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
           />
         ))}
       </div>
@@ -62,8 +63,7 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
         >
-          Where Style Meets{' '}
-          <em className="text-gold not-italic">Perfection</em>
+          Where Style Meets <em className="text-gold not-italic">Perfection</em>
         </motion.h1>
 
         {/* Subheadline */}
@@ -73,8 +73,9 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
         >
-          Experience the ultimate in hair, skin, and beauty care. Shubh Unisex Salon
-          brings world-class grooming to Indore with premium products and expert hands.
+          Experience the ultimate in hair, skin, and beauty care. Shubh Unisex
+          Salon brings world-class grooming to Indore with premium products and
+          expert hands.
         </motion.p>
 
         {/* CTA buttons */}
@@ -85,7 +86,7 @@ function Hero() {
           transition={{ delay: 0.8 }}
         >
           <button
-            onClick={() => handleScroll('#contact')}
+            onClick={() => handleScroll("#contact")}
             className="btn-gold px-10 py-4 text-sm tracking-widest"
           >
             Book Appointment
@@ -97,7 +98,7 @@ function Hero() {
             <FiPhone className="text-base" /> Call Now
           </a>
           <button
-            onClick={() => handleScroll('#services')}
+            onClick={() => handleScroll("#services")}
             className="font-poppins text-white/70 text-sm tracking-widest uppercase underline underline-offset-4 decoration-gold/50 hover:text-gold transition-colors duration-300"
           >
             View Services
@@ -112,13 +113,17 @@ function Hero() {
           transition={{ delay: 1.2 }}
         >
           {[
-            { value: '52+', label: 'Happy Clients' },
-            { value: '5.0', label: 'Star Rating' },
-            { value: '7+', label: 'Years Experience' },
+            { value: "52+", label: "Happy Clients" },
+            { value: "5.0", label: "Star Rating" },
+            { value: "7+", label: "Years Experience" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <p className="font-playfair text-2xl text-gold font-bold">{stat.value}</p>
-              <p className="font-poppins text-white/50 text-xs tracking-widest uppercase mt-1">{stat.label}</p>
+              <p className="font-playfair text-2xl text-gold font-bold">
+                {stat.value}
+              </p>
+              <p className="font-poppins text-white/50 text-xs tracking-widest uppercase mt-1">
+                {stat.label}
+              </p>
             </div>
           ))}
         </motion.div>
@@ -126,16 +131,18 @@ function Hero() {
 
       {/* Scroll indicator */}
       <motion.button
-        onClick={() => handleScroll('#about')}
+        onClick={() => handleScroll("#about")}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 hover:text-gold transition-colors duration-300 flex flex-col items-center gap-1"
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <span className="font-poppins text-xs tracking-widest uppercase">Scroll</span>
+        <span className="font-poppins text-xs tracking-widest uppercase">
+          Scroll
+        </span>
         <FiChevronDown className="text-xl" />
       </motion.button>
     </section>
-  )
+  );
 }
 
-export default Hero
+export default Hero;
