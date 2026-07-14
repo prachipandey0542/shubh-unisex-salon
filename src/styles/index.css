@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FAFAFA;
+    color: #111111;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .section-heading {
+    @apply font-playfair text-4xl md:text-5xl font-bold text-salon-black;
+  }
+
+  .section-subheading {
+    @apply font-poppins text-salon-black/60 text-base md:text-lg mt-3 max-w-2xl mx-auto;
+  }
+
+  .gold-divider {
+    @apply flex items-center justify-center gap-3 mb-4;
+  }
+
+  .gold-divider span {
+    @apply block h-px w-12 bg-gold;
+  }
+
+  .gold-divider em {
+    @apply text-gold text-xs tracking-[0.3em] uppercase not-italic font-poppins font-medium;
+  }
+
+  .btn-primary {
+    @apply bg-salon-black text-gold border border-salon-black px-8 py-3 font-poppins font-medium tracking-wider uppercase text-sm transition-all duration-300 hover:bg-gold hover:text-salon-black hover:border-gold;
+  }
+
+  .btn-outline {
+    @apply bg-transparent text-salon-black border border-salon-black px-8 py-3 font-poppins font-medium tracking-wider uppercase text-sm transition-all duration-300 hover:bg-salon-black hover:text-gold;
+  }
+
+  .btn-gold {
+    @apply bg-gold text-salon-black border border-gold px-8 py-3 font-poppins font-medium tracking-wider uppercase text-sm transition-all duration-300 hover:bg-salon-black hover:text-gold;
+  }
+
+  .card-hover {
+    @apply transition-all duration-400 hover:-translate-y-2 hover:shadow-xl;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F1E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 3px;
+}
+
+/* Lightbox overlay */
+.lightbox-overlay {
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Loading screen */
+.loading-bar {
+  animation: loadBar 1.8s ease-in-out forwards;
+}
+
+@keyframes loadBar {
+  0% { width: 0%; }
+  60% { width: 70%; }
+  100% { width: 100%; }
+}
