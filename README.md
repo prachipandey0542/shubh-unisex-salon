@@ -2,6 +2,8 @@
 
 A complete, production-ready React + Vite website for **Shubh Unisex Salon**, Indore's premier unisex salon. Designed with a luxury black-and-gold aesthetic, smooth animations, and full mobile responsiveness.
 
+A modern and responsive salon website designed to help a local salon establish a strong online presence, showcase its services, and make it easier for customers to connect through WhatsApp, phone, and Google Maps.
+
 ---
 
 ## Features
