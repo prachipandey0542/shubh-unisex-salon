@@ -48,7 +48,6 @@ function Navbar() {
           Shubh <span className="text-gold italic">Unisex</span> Salon
         </motion.a>
 
-        {/* Desktop nav links */}
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link, i) => (
             <motion.a
@@ -69,7 +68,6 @@ function Navbar() {
           ))}
         </nav>
 
-        {/* CTA button */}
         <motion.a
           href="tel:07898831018"
           className="hidden lg:inline-flex items-center gap-2 border border-gold text-gold px-5 py-2 text-xs font-poppins font-medium tracking-widest uppercase transition-all duration-300 hover:bg-gold hover:text-salon-black"

@@ -17,10 +17,8 @@ function Hero() {
         backgroundPosition: "center",
       }}
     >
-      {/* Dark gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/80" />
 
-      {/* Animated gold particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(6)].map((_, i) => (
           <motion.div
@@ -42,7 +40,6 @@ function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-        {/* Overline */}
         <motion.div
           className="flex items-center justify-center gap-4 mb-6"
           initial={{ opacity: 0, y: 20 }}
@@ -78,7 +75,6 @@ function Hero() {
           expert hands.
         </motion.p>
 
-        {/* CTA buttons */}
         <motion.div
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           initial={{ opacity: 0, y: 20 }}

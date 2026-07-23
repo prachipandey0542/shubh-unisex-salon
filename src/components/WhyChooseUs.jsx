@@ -24,7 +24,7 @@ const reasons = [
   {
     icon: FaRupeeSign,
     title: "Affordable Pricing",
-    desc: "Luxury results without the luxury price tag — quality grooming for everyone.",
+    desc: "Luxury results without the luxury price tag - quality grooming for everyone.",
   },
   {
     icon: FiTrendingUp,
@@ -68,7 +68,7 @@ function WhyChooseUs() {
             Why Choose <span className="text-gold italic">Shubh Salon</span>
           </h2>
           <p className="font-poppins text-white/50 text-base mt-4 max-w-xl mx-auto">
-            Eight reasons our clients keep coming back — and send their friends.
+            Eight reasons our clients keep coming back - and send their friends.
           </p>
         </div>
 

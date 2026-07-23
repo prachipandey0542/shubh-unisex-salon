@@ -1,4 +1,4 @@
-// Services offered by Shubh Unisex Salon
+// services offered by Shubh Unisex Salon
 export const services = [
   {
     id: 1,
@@ -14,7 +14,7 @@ export const services = [
     id: 2,
     title: "Hair Styling",
     description:
-      "Blow-dry, straightening, curling — styled to perfection for any occasion.",
+      "Blow-dry, straightening, curling - styled to perfection for any occasion.",
 
     image:
       "https://images.unsplash.com/photo-1560869713-7d0a29430803?w=400&q=80",
@@ -34,7 +34,7 @@ export const services = [
     id: 4,
     title: "Hair Coloring",
     description:
-      "Global color, highlights, balayage — vibrant results using premium products.",
+      "Global color, highlights, balayage - vibrant results using premium products.",
     image:
       "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=400&q=80",
     category: "hair",

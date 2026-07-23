@@ -41,7 +41,7 @@ function Services() {
             Our <span className="text-gold italic">Premium</span> Services
           </h2>
           <p className="section-subheading">
-            Expert care for every grooming need — hair, skin, and beauty — all
+            Expert care for every grooming need - hair, skin, and beauty - all
             under one roof.
           </p>
         </div>
@@ -82,7 +82,6 @@ function Services() {
               }}
               className="bg-white group cursor-default overflow-hidden border border-transparent hover:border-gold/30 transition-all duration-300"
             >
-              {/* Image */}
               <div className="relative h-44 overflow-hidden">
                 <img
                   src={service.image}
@@ -93,7 +92,6 @@ function Services() {
                 <div className="absolute inset-0 bg-gradient-to-t from-salon-black/60 to-transparent" />
               </div>
 
-              {/* Content */}
               <div className="p-5">
                 <h3 className="font-playfair text-lg font-semibold text-salon-black mb-2 group-hover:text-gold transition-colors duration-300">
                   {service.title}
@@ -106,7 +104,6 @@ function Services() {
           ))}
         </motion.div>
 
-        {/* CTA */}
         <div className="text-center mt-14">
           <a href="tel:07898831018" className="btn-primary inline-block">
             Book Your Service

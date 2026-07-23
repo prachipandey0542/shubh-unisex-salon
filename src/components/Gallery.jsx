@@ -15,7 +15,6 @@ function Gallery() {
   const nextImage = () =>
     setLightboxIndex((i) => (i + 1) % galleryImages.length);
 
-  // Keyboard navigation
   const handleKeyDown = (e) => {
     if (e.key === "Escape") closeLightbox();
     if (e.key === "ArrowLeft") prevImage();
@@ -62,11 +61,11 @@ function Gallery() {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 style={{ height: i === 0 || i === 5 ? "412px" : "200px" }}
               />
-              {/* Hover overlay */}
+
               <div className="absolute inset-0 bg-salon-black/0 group-hover:bg-salon-black/50 transition-all duration-300 flex items-center justify-center">
                 <FiZoomIn className="text-white text-3xl opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100" />
               </div>
-              {/* Gold border on hover */}
+
               <div className="absolute inset-0 border-2 border-transparent group-hover:border-gold transition-all duration-300 pointer-events-none" />
             </motion.div>
           ))}
@@ -85,7 +84,6 @@ function Gallery() {
             onKeyDown={handleKeyDown}
             tabIndex={0}
           >
-            {/* Close */}
             <button
               onClick={closeLightbox}
               className="absolute top-6 right-6 text-white/70 hover:text-gold text-3xl transition-colors z-10"
@@ -93,7 +91,6 @@ function Gallery() {
               <FiX />
             </button>
 
-            {/* Prev */}
             <button
               onClick={(e) => {
                 e.stopPropagation();
@@ -104,7 +101,6 @@ function Gallery() {
               <FiChevronLeft />
             </button>
 
-            {/* Image */}
             <motion.img
               key={lightboxIndex}
               src={galleryImages[lightboxIndex].src.replace("w=600", "w=1200")}
@@ -116,7 +112,6 @@ function Gallery() {
               onClick={(e) => e.stopPropagation()}
             />
 
-            {/* Next */}
             <button
               onClick={(e) => {
                 e.stopPropagation();
@@ -127,9 +122,8 @@ function Gallery() {
               <FiChevronRight />
             </button>
 
-            {/* Caption */}
             <p className="absolute bottom-8 left-1/2 -translate-x-1/2 font-poppins text-white/60 text-sm tracking-wide">
-              {lightboxIndex + 1} / {galleryImages.length} —{" "}
+              {lightboxIndex + 1} / {galleryImages.length} -{" "}
               {galleryImages[lightboxIndex].alt}
             </p>
           </motion.div>

@@ -77,7 +77,6 @@ function About() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeUp}
           >
-            {/* Gold frame accent */}
             <div className="absolute -top-4 -left-4 w-full h-full border-2 border-gold/40 z-0" />
             <div className="relative z-10 overflow-hidden">
               <motion.img
@@ -87,7 +86,7 @@ function About() {
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.5 }}
               />
-              {/* Overlay badge */}
+
               <div className="absolute bottom-6 right-6 bg-salon-black text-white px-5 py-4 text-center shadow-xl">
                 <p className="font-playfair text-2xl text-gold font-bold">
                   5.0
@@ -106,7 +105,6 @@ function About() {
             viewport={{ once: true, amount: 0.3 }}
             variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
           >
-            {/* Overline */}
             <motion.div
               className="gold-divider justify-start mb-6"
               variants={fadeUp}

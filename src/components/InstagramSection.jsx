@@ -4,7 +4,6 @@ import { FaInstagram } from "react-icons/fa6";
 const INSTAGRAM_URL =
   "https://www.instagram.com/shubh_unisex_salon?igsh=cDNhMmYzcWJyeGdq&utm_source=qr";
 
-// Mock Instagram grid images
 const igImages = [
   "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=300&q=80",
   "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=300&q=80",
@@ -18,7 +17,6 @@ function InstagramSection() {
   return (
     <section className="py-24 bg-salon-black overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* CTA block */}
         <motion.div
           className="text-center mb-14"
           initial={{ opacity: 0, y: 30 }}

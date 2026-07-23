@@ -61,7 +61,6 @@ function Testimonials() {
           </div>
         </div>
 
-        {/* Carousel */}
         <div className="relative">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
@@ -73,12 +72,10 @@ function Testimonials() {
               exit="exit"
               className="bg-white shadow-lg shadow-black/5 p-10 md:p-14 text-center relative"
             >
-              {/* Opening quote */}
               <span className="absolute top-6 left-8 font-playfair text-8xl text-gold/20 leading-none select-none">
                 "
               </span>
 
-              {/* Stars */}
               <div className="flex justify-center gap-1 mb-6">
                 {[...Array(t.rating)].map((_, i) => (
                   <span key={i} className="text-gold text-xl">
@@ -92,7 +89,6 @@ function Testimonials() {
                 {t.review}
               </p>
 
-              {/* Avatar + name */}
               <div className="flex flex-col items-center gap-2">
                 <div className="w-14 h-14 rounded-full bg-salon-black flex items-center justify-center text-gold font-playfair font-bold text-lg border-2 border-gold">
                   {t.avatar}
@@ -107,7 +103,6 @@ function Testimonials() {
             </motion.div>
           </AnimatePresence>
 
-          {/* Prev / Next */}
           <button
             onClick={prev}
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-8 w-10 h-10 border border-gold/40 hover:bg-gold hover:border-gold text-salon-black hover:text-salon-black flex items-center justify-center transition-all duration-300"

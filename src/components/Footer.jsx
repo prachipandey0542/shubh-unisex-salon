@@ -35,7 +35,6 @@ function Footer() {
       {/* Main footer content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand column */}
           <div className="lg:col-span-1">
             <h3 className="font-playfair text-2xl text-white mb-2">
               Shubh <span className="text-gold italic">Unisex</span> Salon
@@ -44,14 +43,14 @@ function Footer() {
               Where Style Meets Perfection. Indore's premier unisex salon
               offering expert grooming and beauty services.
             </p>
-            {/* Rating badge */}
+
             <div className="inline-flex items-center gap-2 border border-gold/30 px-4 py-2">
               <span className="text-gold">{"★".repeat(5)}</span>
               <span className="font-poppins text-white/60 text-xs">
                 5.0 · 52+ Reviews
               </span>
             </div>
-            {/* Instagram */}
+
             <div className="mt-5">
               <a
                 href={INSTAGRAM_URL}
@@ -133,7 +132,7 @@ function Footer() {
                 <p className="font-poppins text-sm text-white/50 leading-relaxed">
                   172, Bholaram Ustad Marg,
                   <br />
-                  Pipliya Rao, Indore – 452001
+                  Pipliya Rao, Indore - 452001
                 </p>
               </div>
               <div className="pt-2">
@@ -141,7 +140,7 @@ function Footer() {
                   Hours
                 </p>
                 <p className="font-poppins text-sm text-white/50">
-                  Mon–Sun: 9:00 AM – 9:00 PM
+                  Mon-Sun: 9:00 AM - 9:00 PM
                 </p>
               </div>
             </div>

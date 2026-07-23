@@ -62,7 +62,6 @@ function Contact() {
               whileHover={{ y: -6 }}
               className="bg-gray-800  p-8 flex flex-col items-center text-center group transition-all duration-300 border-2 border-transparent hover:border-gold"
             >
-              {/* Icon */}
               <div className="w-14 h-14 border border-gold/40 flex items-center justify-center mb-5 group-hover:bg-gold group-hover:border-gold transition-all duration-300">
                 <card.icon className="text-gold text-xl group-hover:text-salon-black transition-colors duration-300" />
               </div>
