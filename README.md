@@ -1,30 +1,26 @@
 # Shubh Unisex Salon - Premium Responsive Website
+# Live Demo : https://shubh-unisex-salon.vercel.app/
 
-A complete, production-ready React + Vite website for **Shubh Unisex Salon**, Indore's premier unisex salon. Designed with a luxury black-and-gold aesthetic, smooth animations, and full mobile responsiveness.
+A modern and responsive business website developed for Shubh Unisex Salon to strengthen its online presence, showcase salon services, and provide customers with an easy way to connect through WhatsApp, phone, and Google Maps.
+
+The website is built with React and Tailwind CSS, featuring a premium UI, smooth animations, and a fully responsive design optimized for desktop and mobile devices.
 
 ---
 
 ## Features
 
-- **Premium Design** - Luxury black (#111111) + gold (#D4AF37) color palette
-- **Playfair Display + Poppins** typography for an elegant feel
-- **Framer Motion animations** - scroll reveals, counters, hero entrance, carousel
-- **Sticky Navbar** - transparent on load, glass-blur on scroll, mobile hamburger menu
-- **Hero Section** - full-viewport with Unsplash background, animated particles, CTA buttons
-- **About Section** - two-column layout with animated stat counters
-- **Services Section** - 17 filterable service cards with hover effects
-- **Why Choose Us** - dark charcoal section with 8 icon feature cards
-- **Gallery** - 12-image masonry grid with hover zoom and lightbox
-- **Testimonials** - auto-play carousel with 6 customer reviews
-- **Instagram Section** - CTA band linking to the real profile
-- **Contact Section** - contact cards + embedded Google Map
-- **Footer** - dark footer with quick links, services, and contact info
-- **Floating WhatsApp Button** - with pulse animation
-- **Sticky Call Button** - mobile-only bottom bar
-- **Scroll to Top Button** - appears after scrolling
-- **Loading Screen** - animated brand intro
-- **SEO-friendly** - meta tags, OG tags, semantic HTML
-- **Fully Responsive** - mobile-first design
+- **Premium Design** - Luxury black & gold themed interface with modern aesthetics.
+- **Smooth Animations** - Interactive transitions and engaging user experience powered by Framer Motion.
+- **Hero Section** - Engaging landing section with clear call-to-action buttons.
+- **About Section** - Highlights the salon with business information and achievements.
+- **Services Section** - Displays salon services in an organized and user-friendly layout.
+- **Why Choose Us** - Showcases the salon's key strengths and unique offerings.
+- **Gallery** - Interactive image gallery with lightbox preview.
+- **Testimonials** - Customer reviews displayed in a smooth carousel.
+- **Instagram Section** - Direct link to the salon's Instagram profile.
+- **Contact Section** - Business contact details with embedded Google Maps.
+- **SEO-friendly** - Semantic HTML and optimized metadata.
+- **Fully Responsive** - Optimized for mobile, tablet, and desktop devices.
 
 ---
 
@@ -32,7 +28,7 @@ A complete, production-ready React + Vite website for **Shubh Unisex Salon**, In
 
 | Technology | Purpose |
 |---|---|
-| React 18 | UI framework |
+| React  | UI framework |
 | Vite 5 | Build tool & dev server |
 | Tailwind CSS 3 | Utility-first styling |
 | Framer Motion 11 | Animations & transitions |
@@ -117,6 +113,15 @@ salon-website/
 └── README.md
 ```
 
+## Future Enhancements
+
+- Online appointment booking
+- Admin dashboard
+- Dynamic service management
+- Customer reviews management
+- Blog section
+- Online payment integration
+
 ## Deployment
 
 ### Deploy to Vercel
@@ -135,9 +140,11 @@ salon-website/
    - **Publish Directory:** `dist`
 4. Click **Create Static Site**
 
-### Deploy to Netlify
+## Author
 
-1. Run `npm run build` locally
-2. Drag and drop the `dist/` folder at [app.netlify.com/drop](https://app.netlify.com/drop)
+Prachi Pandey
+
+- GitHub: https://github.com/prachipandey0542
+- LinkedIn: https://www.linkedin.com/in/prachi-pandey-300326255
 
 ---
